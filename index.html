@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    <label for="num1">[Enter a number between 2 and 10]<br></label>
+    <input type="text" name="num1" id="num1"> by <input type="text" name="num2" id="num2"> <br> <br>
+    <input type="button" onclick="resultValue()" value="Submit!">
+    <table id="table">
+        <tr>
+            <td id="1c1"></td>
+            <td id="1c2"></td>
+            <td id="1c3"></td>
+            <td id="1c4"></td>
+            <td id="1c5"></td>
+            <td id="1c6"></td>
+            <td id="1c7"></td>
+            <td id="1c8"></td>
+            <td id="1c9"></td>
+            <td id="1c10"></td>
+        </tr>
+        <tr>
+            <td id="2c1"></td>
+            <td id="2c2"></td>
+            <td id="2c3"></td>
+            <td id="2c4"></td>
+            <td id="2c5"></td>
+            <td id="2c6"></td>
+            <td id="2c7"></td>
+            <td id="2c8"></td>
+            <td id="2c9"></td>
+            <td id="2c10"></td>
+        </tr>
+        <tr>
+            <td id="3c1"></td>
+            <td id="3c2"></td>
+            <td id="3c3"></td>
+            <td id="3c4"></td>
+            <td id="3c5"></td>
+            <td id="3c6"></td>
+            <td id="3c7"></td>
+            <td id="3c8"></td>
+            <td id="3c9"></td>
+            <td id="3c10"></td>
+        </tr>
+        <tr>
+            <td id="4c1"></td>
+            <td id="4c2"></td>
+            <td id="4c3"></td>
+            <td id="4c4"></td>
+            <td id="4c5"></td>
+            <td id="4c6"></td>
+            <td id="4c7"></td>
+            <td id="4c8"></td>
+            <td id="4c9"></td>
+            <td id="4c10"></td>
+        </tr>
+        <tr>
+            <td id="5c1"></td>
+            <td id="5c2"></td>
+            <td id="5c3"></td>
+            <td id="5c4"></td>
+            <td id="5c5"></td>
+            <td id="5c6"></td>
+            <td id="5c7"></td>
+            <td id="5c8"></td>
+            <td id="5c9"></td>
+            <td id="5c10"></td>
+        </tr>
+        <tr>
+            <td id="6c1"></td>
+            <td id="6c2"></td>
+            <td id="6c3"></td>
+            <td id="6c4"></td>
+            <td id="6c5"></td>
+            <td id="6c6"></td>
+            <td id="6c7"></td>
+            <td id="6c8"></td>
+            <td id="6c9"></td>
+            <td id="6c10"></td>
+        </tr>
+        <tr>
+            <td id="7c1"></td>
+            <td id="7c2"></td>
+            <td id="7c3"></td>
+            <td id="7c4"></td>
+            <td id="7c5"></td>
+            <td id="7c6"></td>
+            <td id="7c7"></td>
+            <td id="7c8"></td>
+            <td id="7c9"></td>
+            <td id="7c10"></td>
+        </tr>
+        <tr>
+            <td id="8c1"></td>
+            <td id="8c2"></td>
+            <td id="8c3"></td>
+            <td id="8c4"></td>
+            <td id="8c5"></td>
+            <td id="8c6"></td>
+            <td id="8c7"></td>
+            <td id="8c8"></td>
+            <td id="8c9"></td>
+            <td id="8c10"></td>
+        </tr>
+        <tr>
+            <td id="9c1"></td>
+            <td id="9c2"></td>
+            <td id="9c3"></td>
+            <td id="9c4"></td>
+            <td id="9c5"></td>
+            <td id="9c6"></td>
+            <td id="9c7"></td>
+            <td id="9c8"></td>
+            <td id="9c9"></td>
+            <td id="9c10"></td>
+        </tr>
+        <tr>
+            <td id="10c1"></td>
+            <td id="10c2"></td>
+            <td id="10c3"></td>
+            <td id="10c4"></td>
+            <td id="10c5"></td>
+            <td id="10c6"></td>
+            <td id="10c7"></td>
+            <td id="10c8"></td>
+            <td id="10c9"></td>
+            <td id="10c10"></td>
+        </tr>
+      </table>
+      
+      
+      <script>
+        var o1;
+        var o2;
+        var l1;
+        var l2;
+        function resultValue(){
+
+        var n1=document.getElementById("num1").value;
+        var n2=document.getElementById("num2").value;
+
+    if(n1 < 2 || n1 > 10 || n2 < 2 || n2 > 10){
+        alert("Please Enter a number between 2 and 10!");
+     }
+     else{
+        l1 = 1;
+        while(l1 <= 10){
+            var l2 = 1;
+            while(l2 <= 10){
+                o2 = l2 + "c" + l1;
+                document.getElementById(o2).style.border =" #696969";
+                o1="";
+                document.getElementById(o2).innerText=o1;
+                l2++;
+            }
+            l1++;
+        }
+        l1 = 1;
+        while(l1<=n1){
+            l2 = 1;
+            while(l2 <= n2){
+                o1 = l1 * l2;
+                o2 = l2 + "c" + l1;
+                document.getElementById(o2).innerHTML=o1;
+                document.getElementById(o2).style.border = "solid #696969";
+                l2++;
+            }
+            l1++;
+            
+        }
+        
+     }      
+}
+      </script>
+</body>
+</html>
+</body>
+</html>
